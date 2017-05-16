@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Resultados Test') {
       steps {
-        bat 'target/failsafe-reports/*.xml'
+        junit 'target/failsafe-reports/*.xml'
       }
     }
   }
