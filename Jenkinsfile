@@ -35,5 +35,11 @@ pipeline {
         pmd(pattern: 'target/pmd.xml')
       }
     }
+    stage('Generar artefacto') {
+      steps {
+        bat 'mvn clean package -DskipTests'
+        archiveArtifacts 'target/webapp*.jar'
+      }
+    }
   }
 }
