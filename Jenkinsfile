@@ -31,6 +31,8 @@ pipeline {
       steps {
         bat 'mvn -DskipTest checkstyle:checkstyle pmd:pmd findbugs:findbugs'
         checkstyle(pattern: 'target/checkstyle-result.xml')
+        findbugs(pattern: 'target/findbugs.xml')
+        pmd(pattern: 'target/pmd.xml')
       }
     }
   }
