@@ -18,6 +18,7 @@ pipeline {
     stage('Test Maven') {
       steps {
         bat 'mvn clean test'
+        junit 'target/surefire-reports/*.xml'
       }
     }
   }
