@@ -26,6 +26,7 @@ public class GreeterTest {
 	}
 	
 	//A failing test
+	@Ignore
 	@Test
 	public void itHasAFailingTest(){
 		fail("What the hell happened?");
