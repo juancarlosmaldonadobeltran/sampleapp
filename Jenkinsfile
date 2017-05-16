@@ -20,7 +20,11 @@ pipeline {
         bat 'mvn clean test'
         junit 'target/surefire-reports/*.xml'
         bat 'mvn verify -DskipUTs'
-        junit 'target/failsafe_reports/*.xml'
+      }
+    }
+    stage('Resultados Test') {
+      steps {
+        bat 'target/failsafe-reports/*.xml'
       }
     }
   }
