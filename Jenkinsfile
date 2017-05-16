@@ -9,7 +9,7 @@ pipeline {
             
           },
           "Obtener cambios SCM": {
-            git 'git@github.com:juancarlosmaldonadobeltran/sampleapp.git'
+            git 'https://github.com/juancarlosmaldonadobeltran/sampleapp.git'
             
           }
         )
